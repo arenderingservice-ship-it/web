@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de postulación · Fondo de Infraestructuras Culturales — Línea Bibliotecas 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1419; --ink-soft:#2A2F36;
+  --azul:#1A3A6B; --azul-deep:#0F2347; --azul-pale:#EEF3FB; --azul-soft:#D4DEF0;
+  --amarillo:#F4C542; --amarillo-deep:#C99812; --amarillo-pale:#FEF7DD;
+  --blanco:#FFFFFF; --crema2:#F5F6F8;
+  --borde:#E4E7EC; --borde-soft:#EEF0F4;
+  --gris:#5C636B; --gris-soft:#9098A1;
+  --verde:#2f7d5b;
+  --r:10px; --rl:18px;
+  --sh:0 1px 3px rgba(15,35,71,.04), 0 4px 16px rgba(15,35,71,.05);
+  --sh-l:0 6px 32px rgba(15,35,71,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',-apple-system,Segoe UI,Roboto,sans-serif;
+  color:var(--ink-soft); background:var(--crema2);
+  line-height:1.6; font-size:16.5px; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:0 30px}
+h1,h2,h3,.fr{font-family:'Fraunces',Georgia,serif;letter-spacing:-.015em}
+strong,b{color:var(--ink);font-weight:600}
+a{color:var(--azul)}
+.mono{font-family:'DM Mono',monospace}
+
+/* ---------- TOP BAR ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:var(--azul-deep);color:#fff;
+  font-family:'DM Mono',monospace;font-size:12px;letter-spacing:1.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:11px 30px}
+.topbar .r{color:var(--amarillo)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(135deg,var(--azul-deep) 0%,var(--azul) 100%)}
+.hero::before{content:"";position:absolute;top:-160px;right:-140px;width:560px;height:560px;
+  background:radial-gradient(circle,var(--amarillo) 0%,transparent 70%);opacity:.18}
+.hero::after{content:"";position:absolute;bottom:-90px;left:-90px;width:320px;height:320px;
+  border:2px solid var(--amarillo);border-radius:50%;opacity:.12}
+.hero .wrap{position:relative;z-index:1;padding:54px 30px 46px}
+.hero-tag{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:3px;color:var(--amarillo);
+  display:flex;align-items:center;gap:13px;margin-bottom:24px}
+.hero-tag::before{content:"";width:38px;height:1.5px;background:var(--amarillo)}
+.hero h1{font-size:52px;font-weight:600;line-height:1.02;color:#fff;margin-bottom:12px}
+.hero h1 .accent{color:var(--amarillo);font-style:italic}
+.hero .sub{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:25px;color:var(--azul-soft);margin-bottom:30px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.5px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+  padding:8px 14px;border-radius:24px;color:#eaf0fb;display:inline-flex;gap:7px;align-items:center}
+.chip b{color:#fff}
+.chip.go{background:var(--amarillo);border-color:var(--amarillo);color:var(--azul-deep)}
+.chip.go b{color:var(--azul-deep)}
+
+/* ---------- HINT ---------- */
+.hint{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:.2px;color:var(--azul-deep);
+  background:var(--amarillo-pale);border:1.5px solid #F0E0A0;border-radius:32px;box-shadow:var(--sh);
+  padding:14px 26px 14px 18px;margin:26px auto 10px;display:flex;align-items:center;justify-content:center;
+  gap:13px;width:max-content;max-width:100%}
+.hint .hint-ic{width:30px;height:30px;border-radius:50%;background:var(--amarillo-deep);color:#fff;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:15px;animation:hintbounce 1.6s ease-in-out infinite}
+@keyframes hintbounce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+@media(prefers-reduced-motion:reduce){.hint .hint-ic{animation:none}}
+
+/* ---------- SECCIONES COLAPSABLES ---------- */
+section{scroll-margin-top:74px;padding:0}
+details.sec{background:var(--blanco);border:1px solid var(--borde-soft);border-radius:var(--rl);
+  box-shadow:var(--sh);margin:13px 0;overflow:hidden;transition:box-shadow .18s}
+details.sec[open]{box-shadow:var(--sh-l)}
+details.sec:first-of-type{margin-top:24px}
+details.sec>summary{list-style:none;cursor:pointer;position:relative;padding:22px 62px 20px 26px}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary:hover .s-title{color:var(--azul)}
+.sec-head{display:flex;align-items:baseline;gap:15px;margin-bottom:7px}
+.sec-num{font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:var(--amarillo-deep);letter-spacing:1px;flex:none}
+.s-title{font-size:27px;font-weight:600;color:var(--ink);line-height:1.12;transition:color .15s}
+summary .lead{margin:0;font-size:16px;color:var(--gris);max-width:52em}
+.chev{position:absolute;right:22px;top:22px;width:32px;height:32px;border-radius:50%;background:var(--azul-pale);
+  color:var(--azul);display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .22s,background .2s,color .2s}
+details.sec[open]>summary .chev{transform:rotate(180deg);background:var(--amarillo-pale);color:var(--amarillo-deep)}
+.sec-body{padding:2px 26px 24px}
+.sec-body>*:first-child{margin-top:0}
+.hl{background:linear-gradient(180deg,transparent 58%,var(--amarillo) 58%);padding:0 6px;font-style:italic}
+.lead{font-size:20px;color:var(--gris);margin:.1em 0 1.1em;max-width:48em;font-weight:400}
+p{margin:.7em 0} .sec-body p{max-width:54em}
+
+.card{background:var(--crema2);border:1px solid var(--borde-soft);border-radius:var(--rl);padding:22px 26px;margin:14px 0}
+
+ul.check{list-style:none;margin:.3em 0}
+ul.check li{position:relative;padding-left:32px;margin:.6em 0}
+ul.check li::before{content:"";position:absolute;left:4px;top:.18em;width:18px;height:18px;border-radius:5px;
+  background:var(--amarillo-pale);border:1.5px solid var(--amarillo-deep)}
+ul.check li::after{content:"\2713";position:absolute;left:8px;top:.05em;color:var(--amarillo-deep);font-size:12px;font-weight:700}
+ul.check ul.check{margin:.4em 0 .2em}
+ul.arrow{list-style:none;margin:.3em 0}
+ul.arrow li{position:relative;padding-left:26px;margin:.5em 0}
+ul.arrow li::before{content:"\2192";position:absolute;left:0;color:var(--amarillo-deep);font-weight:700}
+
+/* MONTOS */
+.montos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:16px 0}
+.monto{border-radius:var(--rl);padding:28px 28px;position:relative;overflow:hidden;box-shadow:var(--sh)}
+.monto.eq{background:linear-gradient(135deg,var(--azul-deep),var(--azul));color:#fff}
+.monto.eq::before{content:"";position:absolute;top:-80px;right:-80px;width:280px;height:280px;
+  background:radial-gradient(circle,var(--amarillo) 0%,transparent 70%);opacity:.16}
+.monto.ob{background:var(--amarillo-pale);border:1.5px solid #F0E0A0;color:var(--ink)}
+.monto .lbl{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:2px;font-weight:600;text-transform:uppercase;position:relative;z-index:1}
+.monto.eq .lbl{color:var(--amarillo)} .monto.ob .lbl{color:var(--amarillo-deep)}
+.monto .cap{font-family:'DM Mono',monospace;font-size:13px;opacity:.8;margin-top:14px;position:relative;z-index:1}
+.monto .v{font-family:'Fraunces',serif;font-size:44px;font-weight:600;line-height:1;margin:4px 0 2px;letter-spacing:-.03em;position:relative;z-index:1}
+.monto.ob .v{color:var(--azul-deep)}
+.monto .d{font-size:15px;margin-top:12px;position:relative;z-index:1}
+.monto.eq .d{color:rgba(255,255,255,.9)} .monto.ob .d{color:var(--ink-soft)}
+
+/* HIGHLIGHT */
+.highlight{background:var(--amarillo-pale);border:1.5px solid #F0E0A0;border-left:5px solid var(--amarillo-deep);
+  padding:20px 26px;border-radius:var(--rl);margin:16px 0}
+.highlight.azul{background:var(--azul-pale);border:1.5px solid var(--azul-soft);border-left:5px solid var(--azul)}
+.highlight .lbl{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:2px;color:var(--amarillo-deep);
+  font-weight:600;text-transform:uppercase;margin-bottom:9px}
+.highlight.azul .lbl{color:var(--azul)}
+.highlight .htext{font-family:'Fraunces',serif;font-size:20px;line-height:1.4;font-weight:500;color:var(--ink)}
+.highlight.azul .htext{color:var(--azul-deep)}
+.highlight p{font-size:15.5px;margin:.5em 0 0}
+
+/* PASO A PASO */
+ol.steps{list-style:none;margin:.6em 0;counter-reset:st}
+ol.steps li{position:relative;padding:0 0 22px 56px;margin:0}
+ol.steps li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:-2px;width:36px;height:36px;
+  border-radius:50%;background:var(--azul);color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:17px;
+  display:flex;align-items:center;justify-content:center}
+ol.steps li:not(:last-child)::after{content:"";position:absolute;left:17.5px;top:36px;bottom:0;width:1.5px;background:var(--azul-soft)}
+ol.steps li h4{font-family:'Fraunces',serif;font-size:19px;color:var(--azul-deep);font-weight:600;margin-bottom:2px;line-height:1.2}
+ol.steps li p{margin:.25em 0}
+
+/* CRITERIOS */
+.crit{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.crit .c{background:var(--crema2);border:1px solid var(--borde-soft);border-left:4px solid var(--amarillo-deep);
+  border-radius:10px;padding:13px 16px;font-size:14.5px;color:var(--ink-soft)}
+.crit .c b{display:block;font-family:'Fraunces',serif;font-size:16px;color:var(--azul-deep);font-weight:600;margin-bottom:2px}
+
+/* EJEMPLOS */
+.exgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.ex{background:var(--crema2);border:1px solid var(--borde-soft);border-radius:var(--rl);
+  padding:18px 20px;border-top:4px solid var(--azul)}
+.ex.ob{border-top-color:var(--amarillo-deep)} .ex.sys{border-top-color:var(--verde)}
+.ex .tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gris);margin-bottom:7px}
+.ex.eq .tag{color:var(--azul)} .ex.ob .tag{color:var(--amarillo-deep)} .ex.sys .tag{color:var(--verde)}
+.ex h4{font-family:'Fraunces',serif;font-size:18px;color:var(--azul-deep);font-weight:600;margin-bottom:5px;line-height:1.2}
+.ex p{font-size:14px;margin:0}
+
+/* GRUPOS DE RECURSOS */
+.grp{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--azul);
+  font-weight:600;margin:24px 0 10px;display:flex;align-items:center;gap:10px}
+.grp:first-child{margin-top:2px}
+.grp .gn{width:23px;height:23px;border-radius:6px;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}
+.dl{list-style:none;margin:12px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dl a{display:flex;gap:11px;align-items:center;background:var(--blanco);border:1px solid var(--borde-soft);border-radius:12px;
+  padding:12px 15px;text-decoration:none;color:var(--azul-deep);font-weight:600;font-size:15px;transition:border-color .15s,box-shadow .15s}
+.dl a:hover{border-color:var(--azul-soft);box-shadow:var(--sh)}
+.dl a .ico{font-family:'DM Mono',monospace;font-size:10.5px;font-weight:700;color:#fff;background:var(--azul);border-radius:6px;padding:4px 7px;flex:none;letter-spacing:.5px}
+.dl a .ico.pdf,.dl a .ico.vid{background:#b23b3b}
+.dl a span.tx{display:flex;flex-direction:column;line-height:1.25}
+.dl a small{color:var(--gris);font-weight:400;font-size:12px}
+
+/* CONTACTOS */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+.cobj{background:var(--blanco);border:1px solid var(--borde-soft);border-radius:var(--rl);
+  padding:18px 20px;border-top:4px solid var(--azul)}
+.cobj.y{border-top-color:var(--amarillo)}
+.cobj .lbl{font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:1.5px;color:var(--gris);text-transform:uppercase;margin-bottom:6px}
+.cobj .val{font-size:16px;font-weight:600;color:var(--ink);word-break:break-word}
+.cobj .val a{color:var(--azul);text-decoration:none}
+.cobj small{display:block;color:var(--gris);font-weight:400;font-size:13px;margin-top:5px}
+a.cobj{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:box-shadow .15s ease,transform .15s ease,border-color .15s ease}
+a.cobj:hover{box-shadow:var(--sh);transform:translateY(-2px);border-top-color:var(--amarillo-deep)}
+a.cobj .val{color:var(--azul)} a.cobj:hover .val{color:var(--azul-deep)}
+a.cobj .goarrow{color:var(--amarillo-deep);font-weight:700;display:inline-block}
+
+/* FAQ */
+.qa{background:var(--crema2);border:1px solid var(--borde-soft);border-left:4px solid var(--azul-soft);
+  border-radius:var(--rl);padding:18px 22px;margin:11px 0}
+.qtag{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;
+  color:var(--amarillo-deep);background:var(--amarillo-pale);border:1px solid #F0E0A0;border-radius:14px;padding:3px 10px;margin-bottom:10px;font-weight:600}
+.qa .q{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--azul-deep);line-height:1.25;margin-bottom:.4em}
+.qa .a{font-size:15.5px;color:var(--ink-soft)}
+.qa .a b{color:var(--azul-deep)}
+
+/* CIERRE */
+.closing{background:linear-gradient(135deg,var(--azul-deep),var(--azul));color:#fff;border-radius:var(--rl);
+  padding:38px 38px;margin:26px 0 22px;position:relative;overflow:hidden;box-shadow:var(--sh-l)}
+.closing::before{content:"";position:absolute;top:-150px;right:-120px;width:480px;height:480px;
+  background:radial-gradient(circle,var(--amarillo) 0%,transparent 70%);opacity:.14}
+.closing .lbl{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:2.5px;color:var(--amarillo);text-transform:uppercase;margin-bottom:14px;position:relative;z-index:1}
+.closing h2{font-size:32px;font-weight:600;color:#fff;margin-bottom:10px;position:relative;z-index:1}
+.closing h2 .accent{color:var(--amarillo);font-style:italic}
+.closing p{color:var(--azul-soft);max-width:46em;position:relative;z-index:1}
+.closing .chips{margin-top:18px;position:relative;z-index:1}
+
+footer{border-top:1px solid var(--borde);margin-top:24px;padding:22px 0 60px;color:var(--gris);font-size:13px;font-family:'DM Mono',monospace;line-height:1.7;letter-spacing:.3px}
+footer b{color:var(--ink-soft)}
+
+@media(max-width:680px){
+  .hero h1{font-size:36px}.montos,.cgrid,.exgrid,.crit,.dl{grid-template-columns:1fr}.s-title{font-size:23px}
+  .hero .sub{font-size:20px}.closing h2{font-size:26px}
+}
+
+/* ---------- IMPRESIÓN / VERSIÓN _PRINT (todo desplegado, sin barra) ---------- */
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;font-size:11pt}
+  .topbar,.hint,.chev,.screen-only{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .hero .wrap{padding:26px 0 22px}.hero h1{font-size:34pt}
+  details.sec{box-shadow:none;border:none;border-bottom:1px solid var(--borde);border-radius:0;margin:0;break-inside:avoid}
+  details.sec>summary{padding:14px 0 6px}
+  details.sec>.sec-body{display:block!important;padding:0 0 14px}
+  .card,.qa,.monto,.highlight,.cobj,.closing,.ex,.dl a,ol.steps li{break-inside:avoid}
+  a{color:var(--azul);text-decoration:none}
+  @page{margin:1.4cm}
+}
+html.print-mode body{background:#fff}
+html.print-mode .topbar,html.print-mode .hint,html.print-mode .chev,html.print-mode .screen-only{display:none!important}
+html.print-mode details.sec{box-shadow:none;border:none;border-bottom:1px solid var(--borde);border-radius:0;margin:0}
+html.print-mode details.sec>summary{padding:16px 0 6px;cursor:default}
+html.print-mode details.sec>.sec-body{display:block!important;padding:0 0 16px}
+
+/* ---------- CTA POSTULAR ---------- */
+.cta-postular{display:inline-flex;align-items:center;gap:12px;margin-top:26px;background:var(--amarillo);
+  color:var(--azul-deep);font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;text-decoration:none;
+  padding:16px 30px;border-radius:32px;box-shadow:0 6px 22px rgba(244,197,66,.4);transition:transform .15s}
+.cta-postular .ar{transition:transform .18s}
+.cta-postular:hover{transform:translateY(-2px)}
+.cta-postular:hover .ar{transform:translateX(4px)}
+html.anim .cta-postular{animation:ctaglow 2.6s ease-in-out infinite}
+@keyframes ctaglow{0%,100%{box-shadow:0 6px 22px rgba(244,197,66,.35),0 0 0 0 rgba(244,197,66,.55)}
+  50%{box-shadow:0 6px 22px rgba(244,197,66,.35),0 0 0 15px rgba(244,197,66,0)}}
+.tb-right{display:flex;align-items:center;gap:14px}
+.topbar-cta{background:var(--amarillo);color:var(--azul-deep);text-decoration:none;font-family:'DM Sans',sans-serif;
+  font-weight:700;font-size:12px;letter-spacing:.3px;padding:6px 14px;border-radius:20px;transition:transform .15s;white-space:nowrap}
+.topbar-cta:hover{transform:translateY(-1px)}
+
+/* ---------- REVEAL AL SCROLL ---------- */
+html.anim details.sec.reveal,html.anim .closing.reveal{opacity:0;transform:translateY(18px);
+  transition:opacity .55s ease,transform .55s ease}
+html.anim details.sec.reveal.in,html.anim .closing.reveal.in{opacity:1;transform:none}
+@media print{.reveal{opacity:1!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){.cta-postular,.topbar-cta{animation:none!important}}
+
+/* ---------- ASISTENTE AYUDA ---------- */
+.ask-launch{position:fixed;right:22px;bottom:22px;z-index:200;display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--azul-deep),var(--azul));color:#fff;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;padding:14px 20px;border-radius:30px;box-shadow:var(--sh-l)}
+.ask-launch .qic{width:24px;height:24px;border-radius:50%;background:var(--amarillo);color:var(--azul-deep);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces',serif;flex:none}
+.ask-launch:hover{transform:translateY(-2px)}
+html.anim .ask-launch{animation:askpulse 3s ease-in-out infinite}
+@keyframes askpulse{0%,100%{box-shadow:0 8px 26px rgba(15,35,71,.2),0 0 0 0 rgba(26,58,107,.35)}
+  50%{box-shadow:0 8px 26px rgba(15,35,71,.2),0 0 0 13px rgba(26,58,107,0)}}
+.ask-panel{position:fixed;right:22px;bottom:22px;z-index:201;width:380px;max-width:calc(100vw - 32px);
+  height:560px;max-height:calc(100vh - 44px);background:var(--blanco);border:1px solid var(--borde);border-radius:18px;
+  box-shadow:0 20px 60px rgba(15,35,71,.28);display:flex;flex-direction:column;overflow:hidden}
+.ask-panel[hidden]{display:none}
+.ask-head{background:linear-gradient(135deg,var(--azul-deep),var(--azul));color:#fff;padding:15px 18px;position:relative}
+.ask-head h3{font-family:'Fraunces',serif;font-size:19px;color:#fff;margin:0 0 2px}
+.ask-head p{font-size:11px;color:var(--azul-soft);margin:0;font-family:'DM Mono',monospace;letter-spacing:.3px}
+.ask-close{position:absolute;right:12px;top:12px;width:30px;height:30px;border-radius:50%;border:none;
+  background:rgba(255,255,255,.14);color:#fff;font-size:17px;cursor:pointer;line-height:1}
+.ask-disc{background:var(--amarillo-pale);border-bottom:1px solid #F0E0A0;color:#7a5a12;font-size:11.5px;line-height:1.45;padding:9px 16px}
+.ask-msgs{flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.ask-b{max-width:86%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.5}
+.ask-b.bot{background:var(--crema2);border:1px solid var(--borde-soft);align-self:flex-start;border-bottom-left-radius:4px}
+.ask-b.me{background:var(--azul);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.ask-b.bot a{color:var(--azul)}
+.ask-b .src{display:block;margin-top:6px;font-family:'DM Mono',monospace;font-size:10.5px;color:var(--gris);letter-spacing:.3px}
+.ask-sug{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+.ask-sug button{font-family:'DM Sans',sans-serif;font-size:12px;color:var(--azul);background:var(--azul-pale);
+  border:1px solid var(--azul-soft);border-radius:16px;padding:6px 11px;cursor:pointer}
+.ask-sug button:hover{background:var(--azul-soft)}
+.ask-in{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--borde-soft)}
+.ask-in input{flex:1;border:1px solid var(--borde);border-radius:22px;padding:10px 15px;font-family:inherit;font-size:14px;outline:none}
+.ask-in input:focus{border-color:var(--azul-soft)}
+.ask-in button{background:var(--azul);color:#fff;border:none;border-radius:22px;padding:0 16px;cursor:pointer;font-weight:600}
+@media(max-width:480px){.ask-panel{right:10px;left:10px;width:auto;bottom:10px}.ask-launch{right:14px;bottom:14px}}
+
+</style>
+</head>
+<body>
+
+<div class="topbar screen-only">
+  <div class="wrap"><span>BNU · DNC — FONDO DE INFRAESTRUCTURAS CULTURALES</span><span class="tb-right"><span class="r">CIERRE · 28 JUL · 17 H</span><a class="topbar-cta" href="https://culturaenlinea.uy/oportunidade/2766/#info" target="_blank" rel="noopener">Postular &#8594;</a></span></div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-tag">GUÍA DE POSTULACIÓN · CONVOCATORIA 2026</div>
+    <h1>Fondo de Infraestructuras<br>Culturales <span class="accent">· Línea Bibliotecas</span></h1>
+    <p class="sub">Cómo postular tu biblioteca, paso a paso.</p>
+    <div class="chips">
+      <span class="chip">Equipamiento <b>hasta $250.000</b></span>
+      <span class="chip">Obra <b>hasta $700.000</b></span>
+      <span class="chip">Línea bibliotecas <b>$3.000.000</b></span>
+      <span class="chip go">Cierre <b>28 jul · 17 h</b></span>
+    </div>
+    <a class="cta-postular screen-only" href="https://culturaenlinea.uy/oportunidade/2766/#info" target="_blank" rel="noopener">Postular mi proyecto <span class="ar">&#8594;</span></a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="hint screen-only"><span class="hint-ic">&#9662;</span> Tocá cada sección para desplegar el contenido completo</p>
+
+  <!-- 01 -->
+  <section id="s1"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">01</span><h2 class="s-title">De qué se <span class="hl">trata</span></h2></div>
+      <p class="lead">Una oportunidad concreta para mejorar las bibliotecas públicas del interior del país.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <p>La Biblioteca Nacional (BNU) atraviesa un proceso de transformación hacia la biblioteca del futuro, y la mirada territorial es una de sus dimensiones centrales. Este año, junto con la <strong>Dirección Nacional de Cultura (DNC)</strong>, creamos una <strong>línea exclusiva para bibliotecas</strong> dentro del Fondo de Infraestructuras Culturales.</p>
+      <p>La edición 2026 destina en total <strong>$21.375.954</strong> a espacios culturales del interior; de ese total, la <strong>línea bibliotecas cuenta con $3.000.000</strong> para obras y equipamiento, en articulación con la BNU y en el marco del fortalecimiento de la <strong>Red Nacional de Bibliotecas</strong>. El objetivo: resolver problemáticas concretas, mejorar la calidad del servicio y potenciar el impacto en las comunidades.</p>
+      <div class="highlight azul">
+        <div class="lbl">En síntesis</div>
+        <div class="htext">Una línea pensada para que cada biblioteca pueda mejorar su espacio, su servicio y su lugar en la red.</div>
+        <p>Esta guía recoge lo conversado en los encuentros informativos con la DNC. Ante cualquier duda, escribinos (ver Recursos y descargas).</p>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 02 -->
+  <section id="s2"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">02</span><h2 class="s-title">Qué financia: dos <span class="hl">líneas</span></h2></div>
+      <p class="lead">Dos caminos —equipamiento u obra— y el monto de cada uno.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <p>El fondo se estructura en dos grandes caminos. Cada proyecto transita por <strong>uno</strong> de ellos.</p>
+      <div class="montos">
+        <div class="monto eq">
+          <div class="lbl">Equipamiento</div>
+          <div class="v">$250.000</div>
+          <div class="cap">monto máximo · línea bibliotecas</div>
+          <div class="d">Para equipar la biblioteca. No hay límite en el tipo: lo que la biblioteca necesite (mobiliario, climatización, tecnología, digitalización, sonido, proyección).</div>
+        </div>
+        <div class="monto ob">
+          <div class="lbl">Obra</div>
+          <div class="v">$700.000</div>
+          <div class="cap">monto máximo · línea bibliotecas</div>
+          <div class="d">Refacciones, adecuaciones y mejoras edilicias que dejen el espacio activo y en mejores condiciones de servicio.</div>
+        </div>
+      </div>
+      <ul class="arrow">
+        <li>Podés pedir el <strong>monto total o menos</strong>: cada proyecto se presupuesta y se costea con claridad, hasta el tope de la línea.</li>
+        <li><strong>¿Puede costar más?</strong> Sí. Sumás <strong>otra fuente de financiamiento</strong> (por ejemplo, la Intendencia aporta mano de obra o materiales) y presentás una <strong>carta de compromiso</strong> por lo que falta.</li>
+        <li>Las <strong>obras de mayor escala</strong> (hasta $1.700.000) se presentan por la <strong>Intendencia</strong> (persona jurídica), por otras modalidades del fondo, no por la línea bibliotecas.</li>
+      </ul>
+      <div class="highlight">
+        <div class="lbl">El monto es "hasta"</div>
+        <div class="htext">Un proyecto chico también vale: presentar un proyector y una computadora es tan válido como un proyecto grande.</div>
+        <p>No hay que aspirar al total. Lo que importa es la necesidad real y la pertinencia. Y cada postulación fortalece la línea para que el año que viene se repita con más recursos.</p>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 03 -->
+  <section id="s3"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">03</span><h2 class="s-title">Quién puede <span class="hl">postular</span></h2></div>
+      <p class="lead">La biblioteca postula por su cuenta, a través de su responsable, sin competir con la Intendencia.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <p>La línea bibliotecas funciona como un <strong>carril aparte</strong> ("exprés"): permite participar sin entrar en conflicto con los proyectos de la Dirección de Cultura, la Intendencia o los municipios.</p>
+      <div class="card">
+        <ul class="check">
+          <li>Postula una <strong>persona física</strong>: el <strong>director/a, encargado/a o coordinador/a</strong> de la biblioteca.</li>
+          <li>También puede postular quien <strong>coordina un sistema de bibliotecas</strong> (no solo el referente de cada biblioteca).</li>
+          <li>Con el <strong>aval de la Dirección de Cultura</strong> de la que depende la biblioteca.</li>
+          <li>Quien <strong>completa el formulario</strong> puede ser otra persona en representación (por ejemplo, un funcionario administrativo): el responsable sigue siendo el referente de la biblioteca.</li>
+        </ul>
+      </div>
+      <div class="highlight azul">
+        <div class="lbl">Por qué importa</div>
+        <div class="htext">La Intendencia (persona jurídica) presenta un solo proyecto —y no puede si ya tiene uno abierto—. La línea bibliotecas habilita que, además, cada biblioteca postule por su cuenta.</div>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 04 -->
+  <section id="s4"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">04</span><h2 class="s-title">Documentación a <span class="hl">presentar</span></h2></div>
+      <p class="lead">Lo formal es sencillo: cédula, avales y el vínculo con el inmueble.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <div class="card">
+        <ul class="check">
+          <li><strong>Cédula de identidad vigente</strong> del responsable (persona física).</li>
+          <li><strong>Constancia de domicilio o vecindad</strong> que acredite que el responsable reside en el interior del país (es un fondo orientado al interior).</li>
+          <li><strong>Nota de aval de la Dirección de Cultura</strong>, firmada por el jerarca (director/a de cultura o intendente).</li>
+          <li><strong>Documento que vincule el inmueble con la Intendencia.</strong> Lo habitual es que la biblioteca sea de la Intendencia; también vale <strong>comodato</strong> (adjuntando el documento) o <strong>arrendamiento</strong>. Ojo: si es alquiler por menos de 4 años, la obra se complica (la infraestructura requiere una proyección mínima de ~4 años); para equipamiento no hay problema.</li>
+          <li><strong>Declaración jurada</strong> (hay un modelo para completar).</li>
+          <li><strong>Carta(s) de aceptación y breve CV</strong> del responsable técnico (y del equipo, si lo hay).</li>
+          <li>Si el espacio es <strong>patrimonio declarado</strong> por la Comisión Nacional: adjuntar el comprobante.</li>
+        </ul>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 05 -->
+  <section id="s5"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">05</span><h2 class="s-title">Cómo armar el <span class="hl">proyecto</span></h2></div>
+      <p class="lead">Memoria descriptiva, responsable técnico, presupuestos, fotos y cronograma.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <div class="card">
+        <ul class="check">
+          <li><strong>Memoria descriptiva:</strong> contá en detalle qué querés hacer y por qué, para que el jurado entienda las necesidades y visualice todo lo que se podrá hacer. En obra la arma el arquitecto/ingeniero o la empresa; en equipamiento, muchas veces el proveedor.</li>
+          <li><strong>Responsable técnico</strong> (distinto del responsable legal). Puede ser un <strong>funcionario de la Intendencia</strong>, el <strong>proveedor</strong>, o el <strong>propio encargado de la biblioteca</strong> si tiene las competencias (por ejemplo, formación en bibliotecología). En obra: arquitecto/a o ingeniero/a.</li>
+          <li><strong>Presupuestos a valores actuales:</strong> de proveedores (equipamiento) o de empresas (obra). Un buen presupuesto es una señal de viabilidad.</li>
+          <li><strong>Formación en el uso:</strong> si el equipo requiere capacitación, indicá quién lo instala y quién lo opera (la empresa proveedora puede dar un cursillo).</li>
+          <li><strong>Fotos del estado actual</strong> del espacio (registro inicial). Al finalizar: registro final (obra terminada / equipamiento instalado).</li>
+          <li><strong>Cronograma</strong> por etapas/meses: cuándo se adquiere/instala y cuándo queda funcional. Si es obra, sumá planos o anteproyecto.</li>
+          <li><strong>Memoria de actividades culturales:</strong> lo que la biblioteca viene haciendo y la agenda a futuro a partir de las mejoras.</li>
+        </ul>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 06 -->
+  <section id="s6"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">06</span><h2 class="s-title">La <span class="hl">viabilidad</span> es clave</h2></div>
+      <p class="lead">Que el proyecto cierre: que inicie, termine y la plata alcance.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <ul class="arrow">
+        <li>El proyecto debe ser <strong>autoconcluyente</strong>: que inicie y termine, y que <strong>la plata alcance</strong>.</li>
+        <li>Si cuesta más que el tope, tiene que quedar claro <strong>de dónde sale el resto</strong> (carta de compromiso de la Intendencia u otra fuente).</li>
+        <li><strong>Menos es más:</strong> mejor un proyecto acotado y viable que uno ambicioso que no cierra.</li>
+        <li>Lo esencial: que al terminar, el espacio quede <strong>funcional</strong> y pueda prestar los servicios pensados.</li>
+      </ul>
+    </div>
+  </details></section>
+
+  <!-- 07 -->
+  <section id="s7"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">07</span><h2 class="s-title">Cómo se <span class="hl">evalúa</span></h2></div>
+      <p class="lead">Quién integra el tribunal y con qué criterios se asignan los puntajes.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <div class="highlight azul">
+        <div class="lbl">Quién evalúa</div>
+        <div class="htext">El tribunal está integrado por arquitectos (con experiencia docente, en museología y patrimonio, y además son artistas), no necesariamente conocen a fondo el mundo de las bibliotecas.</div>
+        <p>Por eso, sin tecnicismos ni textos larguísimos, dales los elementos clave para que comprendan las necesidades y el potencial de tu proyecto. No des nada por sobreentendido.</p>
+      </div>
+      <p>Los puntajes se asignan según los criterios de las bases (pág. 27). Tenelos presentes al redactar:</p>
+      <div class="crit">
+        <div class="c"><b>Calidad de la propuesta</b>Claridad, coherencia y sentido del proyecto.</div>
+        <div class="c"><b>Viabilidad técnica</b>Que sea realizable y esté bien presupuestado.</div>
+        <div class="c"><b>Impacto en la comunidad</b>Beneficio cultural local concreto.</div>
+        <div class="c"><b>Impacto territorial o regional</b>Alcance más allá de lo local; circulación cultural.</div>
+        <div class="c"><b>Adecuación presupuestal</b>Costos realistas y bien ajustados.</div>
+        <div class="c"><b>Fortalecimiento del ecosistema</b>Acceso a bienes y servicios culturales; red local.</div>
+      </div>
+      <p>La convocatoria además <strong>favorece localidades con menos infraestructura cultural</strong> (rurales o de baja densidad). Si es tu caso, hacelo visible.</p>
+    </div>
+  </details></section>
+
+  <!-- 08 -->
+  <section id="s8"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">08</span><h2 class="s-title">Paso a <span class="hl">paso</span></h2></div>
+      <p class="lead">Cómo postular en Cultura en Línea, del registro al envío.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <p>La postulación es 100% en línea, en <strong>culturaenlinea.uy</strong>. Se completa por etapas: podés guardar e ingresar otro día.</p>
+      <ol class="steps">
+        <li>
+          <h4>Entrá a la página de la BNU</h4>
+          <p>Tiene el <strong>paso a paso</strong>, preguntas frecuentes, los documentos y un <strong>video tutorial de 4 minutos</strong>. Guardá el enlace: <a href="https://www.bibna.gub.uy/uncategorized/convocatoria-abierta-para-fortalecer-bibliotecas-publicas-del-interior/" target="_blank" rel="noopener">bibna.gub.uy — Convocatoria bibliotecas</a>.</p>
+        </li>
+        <li>
+          <h4>Creá tu usuario ("agente") en Cultura en Línea</h4>
+          <p>Ingresá a <a href="https://culturaenlinea.uy/" target="_blank" rel="noopener">culturaenlinea.uy</a> y creá un agente de tipo <strong>individual</strong> (con el nombre de la persona). Completá los campos obligatorios: nombre completo, cédula, fecha de nacimiento, género, e-mail y teléfono. Te ayuda el <a href="https://youtu.be/RV82VO6kKuA" target="_blank" rel="noopener">video "Cómo crear un agente"</a>.</p>
+        </li>
+        <li>
+          <h4>Abrí la convocatoria y empezá la postulación</h4>
+          <p>Entrá a la <a href="https://culturaenlinea.uy/oportunidade/2766/#info" target="_blank" rel="noopener">oportunidad del Fondo de Infraestructuras Culturales</a> y comenzá a completar el formulario. Podés hacerlo en varias sesiones.</p>
+        </li>
+        <li>
+          <h4>Cargá el formulario y subí los documentos</h4>
+          <p>Memoria descriptiva, presupuestos, fotos del estado actual, cronograma y la documentación de la sección 04 (cédula, constancia de domicilio, nota aval, vínculo del inmueble, declaración jurada, carta de aceptación + CV del responsable técnico; planos si es obra).</p>
+        </li>
+        <li>
+          <h4>Revisá y enviá antes del cierre</h4>
+          <p><strong>28 de julio de 2026, 17:00 h.</strong> Una vez que enviás, no se puede modificar. Las consultas se reciben hasta el <strong>27 de julio, 17 h</strong>.</p>
+        </li>
+      </ol>
+      <div class="highlight">
+        <div class="lbl">Después del envío</div>
+        <p>La selección lleva unos <strong>4 meses</strong>. El pago se hace en una <strong>única partida</strong>; el orden de cobro depende del cronograma (los proyectos de ejecución más próxima cobran primero). Los proyectos comienzan en <strong>enero de 2027</strong>.</p>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 09 -->
+  <section id="s9"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">09</span><h2 class="s-title">Si resultás <span class="hl">seleccionado</span></h2></div>
+      <p class="lead">Cómo se cobra, el acompañamiento y los compromisos posteriores.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <div class="card">
+        <ul class="check">
+          <li><strong>No necesitás cuenta bancaria propia:</strong> el dinero se transfiere a la <strong>cuenta de la Intendencia</strong> (no a la del responsable). Te avisamos cuando se deposita.</li>
+          <li><strong>Acompañamiento</strong> durante toda la ejecución: la Oficina de Fondos para la Cultura y la BNU (Martín y Milagros) van a estar en contacto y pidiendo informes cada tanto.</li>
+          <li><strong>Ajustes razonables:</strong> si algo cambia (por ejemplo, un equipo sin stock), lo informás, recibís el OK y seguís adelante.</li>
+          <li><strong>Informe técnico final</strong> (de la obra o del equipamiento), con fotos del resultado.</li>
+          <li><strong>Rendición de cuentas</strong> a nombre del responsable legal, que en general arma el <strong>contador de la Intendencia</strong>.</li>
+          <li><strong>Placa del fondo</strong> en el inmueble.</li>
+          <li><strong>Dos actividades públicas e inclusivas</strong>, en articulación con otras bibliotecas y con la Biblioteca Nacional (una invitación al trabajo en red: compartir e intercambiar experiencias).</li>
+        </ul>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 10 -->
+  <section id="s10"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">10</span><h2 class="s-title">Recursos y <span class="hl">descargas</span></h2></div>
+      <p class="lead">Bases, preguntas frecuentes e inscripción — todo lo que necesitás, en un solo lugar.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+
+      <div class="grp"><span class="gn">1</span> Sobre las bases</div>
+      <ul class="dl">
+        <li><a href="https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/documentos/noticias/Bases_Fondo%20de%20Infraestructura_2026.pdf" target="_blank" rel="noopener"><span class="ico pdf">PDF</span><span class="tx">Bases de la convocatoria 2026<small>Criterios de evaluación en la pág. 27</small></span></a></li>
+        <li><a href="https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/documentos/noticias/Bios-Jurados_Infra-2026%20%282%29_0.pdf" target="_blank" rel="noopener"><span class="ico pdf">PDF</span><span class="tx">Jurado — biografías</span></a></li>
+      </ul>
+      <div class="cgrid">
+        <div class="cobj y">
+          <div class="lbl">Consultas sobre bases · hasta 27 jul 17 h</div>
+          <div class="val"><a href="mailto:fondodeinfraestructuras@mec.gub.uy">fondodeinfraestructuras@mec.gub.uy</a>
+          <small>Asunto: FICIP 2026 + nombre del proyecto + localidad + departamento.</small></div>
+        </div>
+      </div>
+
+      <div class="grp"><span class="gn">2</span> Preguntas frecuentes</div>
+      <ul class="dl">
+        <li><a href="https://fondos.culturaenlinea.uy/preguntas-frecuentes/" target="_blank" rel="noopener"><span class="ico web">WEB</span><span class="tx">Preguntas frecuentes — Fondos<small>Respuestas oficiales de la convocatoria</small></span></a></li>
+        <li><a href="https://www.bibna.gub.uy/uncategorized/convocatoria-abierta-para-fortalecer-bibliotecas-publicas-del-interior/" target="_blank" rel="noopener"><span class="ico web">WEB</span><span class="tx">Página BNU — paso a paso<small>Guía, FAQ, documentos y video tutorial</small></span></a></li>
+      </ul>
+
+      <div class="grp"><span class="gn">3</span> Inscripción, materiales y modelos</div>
+      <ul class="dl">
+        <li><a href="https://culturaenlinea.uy/oportunidade/2766/#info" target="_blank" rel="noopener"><span class="ico web">WEB</span><span class="tx">Inscripción — Cultura en Línea<small>Oportunidad del Fondo (postular)</small></span></a></li>
+        <li><a href="https://youtu.be/RV82VO6kKuA" target="_blank" rel="noopener"><span class="ico vid">VÍD</span><span class="tx">Video: cómo crear un agente<small>Registro en la plataforma</small></span></a></li>
+        <li><a href="https://culturaenlinea.uy/files/opportunity/2766/modelo-declaracion-jurada-convocatoria-2026.pdf" target="_blank" rel="noopener"><span class="ico pdf">PDF</span><span class="tx">Modelo de declaración jurada 2026</span></a></li>
+        <li><a href="https://culturaenlinea.uy/files/opportunity/2766/modelo-carta-aceptacion-convocatoria-2026.pdf" target="_blank" rel="noopener"><span class="ico pdf">PDF</span><span class="tx">Modelo de carta de aceptación<small>Para el responsable técnico</small></span></a></li>
+        <li><a href="https://fondos.culturaenlinea.uy/materiales-de-interes/" target="_blank" rel="noopener"><span class="ico web">WEB</span><span class="tx">Materiales de interés<small>Modelos y anexos de rendición</small></span></a></li>
+      </ul>
+      <div class="cgrid">
+        <a class="cobj cobj-link" href="https://wa.me/59891713935" target="_blank" rel="noopener">
+          <div class="lbl">WhatsApp · Oficina de Fondos</div>
+          <div class="val">091 713 935 <span class="goarrow">&#8594;</span></div>
+        </a>
+        <div class="cobj">
+          <div class="lbl">Soporte de la plataforma</div>
+          <div class="val"><a href="mailto:culturaenlinea@mec.gub.uy">culturaenlinea@mec.gub.uy</a>
+          <small>Dudas técnicas de Cultura en Línea.</small></div>
+        </div>
+      </div>
+
+      <div class="grp"><span class="gn">·</span> Acompañamiento BNU</div>
+      <div class="cgrid">
+        <div class="cobj">
+          <div class="lbl">Proyecto de Transformación</div>
+          <div class="val">Martín Espósito
+          <small>Equipo OPP responsable por el diseño del proyecto de Transformación de la Biblioteca Nacional del Uruguay, con apoyo de la institución, durante la postulación e implementación.</small></div>
+        </div>
+        <div class="cobj y">
+          <div class="lbl">Gestión territorial · BNU</div>
+          <div class="val">Milagros Puente
+          <small>Referente de la Red Nacional de Bibliotecas para consultas y proyectos de sistema.</small></div>
+        </div>
+      </div>
+
+    </div>
+  </details></section>
+
+  <!-- 11 -->
+  <section id="s11"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">11</span><h2 class="s-title">Ejemplos de <span class="hl">proyectos</span></h2></div>
+      <p class="lead">Ideas de las charlas para inspirar tu proyecto. Podés combinarlas o adaptarlas.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+      <div class="exgrid">
+        <div class="ex eq"><div class="tag">Equipamiento</div><h4>Climatización</h4><p>Aire acondicionado para mejorar el confort y habilitar más horas y actividades en el espacio.</p></div>
+        <div class="ex eq"><div class="tag">Equipamiento</div><h4>Escáner para digitalización</h4><p>Digitalizar prensa y publicaciones locales. La BNU tiene un documento técnico de referencia para elegir el equipo adecuado.</p></div>
+        <div class="ex eq"><div class="tag">Equipamiento</div><h4>Proyector + computadora</h4><p>Un proyecto chico (y válido) para habilitar proyecciones, talleres y espacios digitales.</p></div>
+        <div class="ex eq"><div class="tag">Equipamiento</div><h4>Mobiliario</h4><p>Mesas y sillas para la sala infantil o de lectura. El responsable técnico puede ser el propio encargado.</p></div>
+        <div class="ex eq"><div class="tag">Equipamiento temático</div><h4>Equipos con contenido</h4><p>Equipamiento ligado a una temática cultural o educativa: potencia procesos, no solo funcionalidad.</p></div>
+        <div class="ex ob"><div class="tag">Obra menor</div><h4>Seguridad y cerramientos</h4><p>Rejas, cerramientos o reacondicionamiento, con presupuesto de empresa y descripción (las alarmas serían equipamiento).</p></div>
+        <div class="ex ob"><div class="tag">Obra</div><h4>Restauración de espacios</h4><p>Recuperar y optimizar áreas de la biblioteca (adultos, infantil, usos múltiples) para nuevas actividades.</p></div>
+        <div class="ex sys"><div class="tag">Sistema · derrame</div><h4>Biblioteca móvil / valija viajera</h4><p>Un dispositivo que rota entre bibliotecas y escuelas. Lo presenta la coordinación del sistema.</p></div>
+        <div class="ex sys"><div class="tag">Sistema · derrame</div><h4>Compras colectivas</h4><p>Equipamiento repartido entre varias bibliotecas del sistema, con mayor impacto territorial.</p></div>
+        <div class="ex sys"><div class="tag">Sistema · derrame</div><h4>Modelo "iniciador"</h4><p>Un modelo modular y replicable para empezar a llevar pequeñas bibliotecas a juntas locales.</p></div>
+      </div>
+    </div>
+  </details></section>
+
+  <!-- 12 -->
+  <section id="s12"><details class="sec">
+    <summary>
+      <div class="sec-head"><span class="sec-num">12</span><h2 class="s-title">Preguntas <span class="hl">frecuentes</span></h2></div>
+      <p class="lead">Casos reales planteados en las charlas.</p>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="sec-body">
+
+      <div class="qa"><span class="qtag">Artigas</span>
+        <div class="q">¿Puedo presentar obra y equipamiento, o se da una "doble postulación"?</div>
+        <p class="a">La línea bibliotecas va por un carril aparte. La <b>Intendencia (persona jurídica) presenta un único proyecto</b>; la <b>biblioteca puede postular además su equipamiento</b> a través de su director/a. No compiten. También los <b>municipios</b> pueden postular a través del <b>alcalde</b>. Cada proyecto va por una sola línea: obra o equipamiento.</p>
+      </div>
+      <div class="qa"><span class="qtag">Sistema</span>
+        <div class="q">Si se presenta una sola biblioteca del sistema, ¿quién es el responsable?</div>
+        <p class="a">Puede ser <b>el coordinador del sistema o el encargado de la biblioteca</b>; es una decisión estratégica del departamento (presentar cada biblioteca por separado las pone a competir entre sí). Si el proyecto es <b>del sistema</b> —por ejemplo, una valija viajera que rota—, lo presenta la <b>coordinación</b>.</p>
+      </div>
+      <div class="qa"><span class="qtag">Inmueble</span>
+        <div class="q">¿Sirve un comodato o un alquiler para acreditar el inmueble?</div>
+        <p class="a">Lo habitual es que la biblioteca sea <b>propiedad de la Intendencia</b>. También vale <b>comodato</b> (adjuntando el documento) o <b>arrendamiento</b>; pero si el alquiler es por menos de <b>4 años</b>, la <b>obra</b> se complica (requiere una proyección mínima de ~4 años). Para <b>equipamiento</b> no hay ese problema.</p>
+      </div>
+      <div class="qa"><span class="qtag">Mobiliario</span>
+        <div class="q">Para comprar mobiliario, ¿quién es el responsable técnico?</div>
+        <p class="a">El <b>propio encargado de la biblioteca</b>, que conoce las necesidades del espacio. El <b>proveedor</b> aporta las características técnicas del mobiliario en el presupuesto (medidas, materiales, etc.).</p>
+      </div>
+      <div class="qa"><span class="qtag">Escáner</span>
+        <div class="q">Quiero comprar un escáner pero no sé cuál. ¿Cómo lo resuelvo?</div>
+        <p class="a">La <b>Biblioteca Nacional cuenta con un documento técnico de referencia</b> que podés pedir como guía. Definí también <b>quién lo instala</b> y <b>quién lo opera</b>, y si hace falta un cursillo del proveedor: eso hace a la viabilidad.</p>
+      </div>
+      <div class="qa"><span class="qtag">Monto</span>
+        <div class="q">Mi proyecto es muy chico (un proyector y una computadora). ¿Vale la pena?</div>
+        <p class="a">Sí. El monto es <b>"hasta"</b>: no hay que aspirar al total. Un proyecto pequeño y bien fundamentado es totalmente válido, y cada postulación ayuda a <b>defender la línea</b> para que el año que viene se repita con más recursos.</p>
+      </div>
+      <div class="qa"><span class="qtag">Cuenta bancaria</span>
+        <div class="q">¿Necesito tener cuenta bancaria como responsable?</div>
+        <p class="a">No. Aunque las bases lo mencionen en general, en este caso <b>el dinero va a la cuenta de la Intendencia</b>, no a la del responsable.</p>
+      </div>
+      <div class="qa"><span class="qtag">Tacuarembó</span>
+        <div class="q">¿Cuántas postulaciones puede haber por departamento?</div>
+        <p class="a">Cada biblioteca puede presentar su proyecto a través de su responsable <b>(persona física), con aval de la Dirección de Cultura</b>. La <b>Intendencia (persona jurídica) presenta un solo proyecto</b> y no puede si ya tiene uno abierto.</p>
+      </div>
+      <div class="qa"><span class="qtag">Tacuarembó</span>
+        <div class="q">Tenemos bibliotecas en centros de barrio gestionados por comisiones. ¿Pueden postular?</div>
+        <p class="a">Por sí mismas, no: las comisiones <b>usan</b> el espacio pero <b>no tienen vínculo jurídico con el inmueble</b>. Como el edificio es de la Intendencia, por esas bibliotecas <b>postularía la propia Intendencia</b>.</p>
+      </div>
+      <div class="qa"><span class="qtag">Durazno</span>
+        <div class="q">¿El fondo es anual? ¿Puedo equipar bibliotecas nuevas en juntas locales?</div>
+        <p class="a">Sí, es <b>concursable y anual</b>. La línea está pensada para <b>bibliotecas existentes</b>, pero podés <b>reformularlo como un proyecto "iniciador"</b>: un modelo modular y replicable para empezar a desarrollar el sistema. Bien justificado, el jurado puede valorar su potencial.</p>
+      </div>
+      <div class="qa"><span class="qtag">Flores</span>
+        <div class="q">Mi biblioteca está en un centro cultural con teatro/sala aparte. ¿Puedo equipar ese espacio?</div>
+        <p class="a">Técnicamente puede presentarse, pero la <b>recomendación</b> es priorizar proyectos que <b>impacten directamente a la biblioteca</b>. Hay un límite con espacios de centro cultural que rozan otras líneas del fondo. Si esas actividades son propias y continuas de la biblioteca, conviene justificarlo muy bien.</p>
+      </div>
+
+    </div>
+  </details></section>
+
+  <!-- CIERRE -->
+  <div class="closing">
+    <div class="lbl">Convocatoria 2026</div>
+    <h2>Animate a <span class="accent">participar</span></h2>
+    <p>Esta línea fue creada especialmente para las bibliotecas. Presentarte —aunque sea un proyecto chico— mejora tu espacio y ayuda a que el año que viene la herramienta crezca con más recursos.</p>
+    <div class="chips">
+      <span class="chip">Equipamiento <b>$250.000</b></span>
+      <span class="chip">Obra <b>$700.000</b></span>
+      <span class="chip go">Cierre <b>28 jul · 17 h</b></span>
+      <span class="chip">Postulá en <b>culturaenlinea.uy</b></span>
+    </div>
+  </div>
+
+  <footer>
+    <p><b>FONDO DE INFRAESTRUCTURAS CULTURALES — LÍNEA BIBLIOTECAS.</b><br>
+    Iniciativa conjunta de la Biblioteca Nacional (BNU) y la Dirección Nacional de Cultura (DNC).</p>
+    <p>Documento de ayuda elaborado a partir de los encuentros informativos de junio–julio de 2026 y de la información oficial de la convocatoria. Ante cualquier diferencia, prevalecen las bases oficiales.</p>
+  </footer>
+
+</div>
+
+<button id="askBtn" class="ask-launch screen-only" aria-label="Abrir ayuda rápida"><span class="qic">?</span> Ayuda rápida</button>
+<div id="askPanel" class="ask-panel screen-only" hidden role="dialog" aria-label="Ayuda rápida">
+  <div class="ask-head"><h3>Ayuda rápida</h3><p>Guía del fondo · Línea Bibliotecas</p><button class="ask-close" id="askClose" aria-label="Cerrar">&times;</button></div>
+  <div class="ask-disc">Esta ayuda facilita la comprensión de la información de esta guía y sus enlaces. No reemplaza las bases oficiales: ante preguntas complejas, comunicate a los correos y personas indicados.</div>
+  <div class="ask-msgs" id="askMsgs"></div>
+  <div class="ask-sug" id="askSug"></div>
+  <form class="ask-in" id="askForm"><input id="askInput" type="text" placeholder="Escribí tu duda..." autocomplete="off"><button type="submit">Enviar</button></form>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce && !root.classList.contains('print-mode') && 'IntersectionObserver' in window){
+    root.classList.add('anim');
+    var rev=document.querySelectorAll('details.sec, .closing');
+    rev.forEach(function(el){el.classList.add('reveal');});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+    rev.forEach(function(el){io.observe(el);});
+  }
+  var FB="No encontré eso puntualmente en la guía. Para dudas específicas o complejas, escribí a <a href='mailto:fondodeinfraestructuras@mec.gub.uy'>fondodeinfraestructuras@mec.gub.uy</a> (bases) o <a href='mailto:culturaenlinea@mec.gub.uy'>culturaenlinea@mec.gub.uy</a> (plataforma), o al WhatsApp <b>091 713 935</b>.";
+  var KB=[
+   {k:["cuanto","monto","montos","dinero","plata","maximo","250","700","tope","pesos","cuanto puedo"],a:"En la línea bibliotecas: <b>equipamiento hasta $250.000</b> y <b>obra hasta $700.000</b> (la línea tiene $3.000.000 en total). Podés pedir menos: el monto es &ldquo;hasta&rdquo;. Si cuesta más, se complementa con otra fuente (carta de compromiso de la Intendencia). <span class='src'>Sección 02</span>"},
+   {k:["quien","postula","postular","director","encargado","coordinador","persona fisica","quien puede"],a:"Una <b>persona física</b>: el director/a, encargado/a o coordinador/a de la biblioteca (también quien coordina un sistema), con <b>aval de la Dirección de Cultura</b>. El formulario lo puede completar otra persona en representación. <span class='src'>Sección 03</span>"},
+   {k:["documento","documentos","documentacion","papeles","cedula","requisito","requisitos","necesito","constancia","aval"],a:"Cédula vigente, constancia de domicilio/vecindad (interior), nota de aval de la Dirección de Cultura, documento que vincule el inmueble con la Intendencia, declaración jurada, y carta de aceptación + CV del responsable técnico. <span class='src'>Sección 04</span>"},
+   {k:["cuando","cierra","cierre","plazo","fecha","28","julio","vence","hasta cuando"],a:"El cierre es el <b>28 de julio de 2026, 17:00 h</b>. Consultas hasta el <b>27 de julio, 17 h</b>. Los proyectos comienzan en enero de 2027. <span class='src'>Sección 08</span>"},
+   {k:["como postulo","como postular","plataforma","culturaenlinea","agente","registro","inscribir","inscripcion","formulario","paso a paso"],a:"En <b>culturaenlinea.uy</b>: creá un agente <b>individual</b>, entrá a la <a href='https://culturaenlinea.uy/oportunidade/2766/#info' target='_blank' rel='noopener'>oportunidad del Fondo</a> y completá el formulario por etapas. Una vez enviado, no se modifica. <span class='src'>Sección 08</span>"},
+   {k:["tecnico","responsable tecnico","arquitecto","ingeniero","proveedor","avala","quien firma"],a:"En obra: arquitecto/a o ingeniero/a (puede ser de la Intendencia). En equipamiento: el proveedor, un funcionario o el propio encargado si tiene competencias. Para mobiliario, suele ser el encargado. <span class='src'>Sección 05</span>"},
+   {k:["obra","equipamiento","diferencia","edilicia","refaccion","equipar","que financia"],a:"Dos líneas: <b>equipamiento</b> (hasta $250.000: mobiliario, climatización, tecnología…) u <b>obra</b> (hasta $700.000: refacciones y mejoras edilicias). Cada proyecto va por una sola. <span class='src'>Sección 02</span>"},
+   {k:["comodato","alquiler","arrendamiento","inmueble","edificio","propiedad","local","vinculo"],a:"Lo habitual es que la biblioteca sea de la Intendencia. También vale <b>comodato</b> (con el documento) o <b>arrendamiento</b>; pero si el alquiler es por menos de 4 años, la <b>obra</b> se complica. Para equipamiento no hay problema. <span class='src'>Sección 04</span>"},
+   {k:["intendencia","doble","compite","conflicto","juridica","casa de la cultura","dos proyectos"],a:"La línea bibliotecas va por un carril aparte: la Intendencia presenta un solo proyecto y la biblioteca postula además por su cuenta, a través de su responsable. No compiten. <span class='src'>Sección 03</span>"},
+   {k:["sistema","varias","valija","viajera","movil","conjunto","varias bibliotecas"],a:"Sí, puede postular un sistema. Lo presenta la coordinación (o una biblioteca) y puede incluir dispositivos que rotan, como una <b>biblioteca móvil / valija viajera</b>, o compras colectivas. <span class='src'>Preguntas frecuentes</span>"},
+   {k:["escaner","digitalizacion","digitalizar","prensa","scanner"],a:"La BNU tiene un <b>documento técnico de referencia</b> para elegir el equipo adecuado (pedilo a gestión territorial). Definí también quién lo instala y lo opera. <span class='src'>Preguntas frecuentes</span>"},
+   {k:["chico","poco","pequeno","vale la pena","minimo","proyector","es poco"],a:"Sí vale. El monto es &ldquo;hasta&rdquo;: un proyecto pequeño y bien fundamentado es válido, y cada postulación fortalece la línea para el año próximo. <span class='src'>Sección 02</span>"},
+   {k:["cuenta bancaria","banco","cuenta","transferencia"],a:"No necesitás cuenta bancaria propia: el dinero se transfiere a la <b>cuenta de la Intendencia</b>. <span class='src'>Sección 09</span>"},
+   {k:["evalua","evaluacion","jurado","tribunal","criterio","criterios","puntaje","como gana"],a:"El tribunal son arquitectos (con experiencia docente, en museología y patrimonio, y artistas); no conocen a fondo las bibliotecas, así que fundamentá bien. Los criterios están en la pág. 27 de las bases. <span class='src'>Sección 07</span>"},
+   {k:["viabilidad","viable","autoconcluyente","alcanza","cierra el proyecto"],a:"Que el proyecto sea <b>autoconcluyente</b>: que inicie, termine y la plata alcance. Si cuesta más que el tope, mostrá de dónde sale el resto (carta de compromiso). <span class='src'>Sección 06</span>"},
+   {k:["rendicion","rendir","cuentas","contador","gastos"],a:"La rendición va a nombre del responsable legal, pero en general la arma el <b>contador de la Intendencia</b>. <span class='src'>Sección 09</span>"},
+   {k:["gano","seleccionado","compromiso","compromisos","placa","actividades","obligacion","si me eligen"],a:"Placa del fondo, informe técnico final con fotos, rendición, y <b>dos actividades</b> en articulación con otras bibliotecas y la BNU. Con acompañamiento durante la ejecución. <span class='src'>Sección 09</span>"},
+   {k:["contacto","consulta","consultas","correo","mail","email","whatsapp","telefono","a quien","persona"],a:"Bases: <a href='mailto:fondodeinfraestructuras@mec.gub.uy'>fondodeinfraestructuras@mec.gub.uy</a> (asunto: FICIP 2026 + proyecto + localidad + departamento). Plataforma: <a href='mailto:culturaenlinea@mec.gub.uy'>culturaenlinea@mec.gub.uy</a>. WhatsApp: <b>091 713 935</b>. <span class='src'>Sección 10</span>"},
+   {k:["bases","modelo","modelos","declaracion jurada","carta","descarga","descargas","materiales","tutorial","video","donde estan"],a:"En <b>Recursos y descargas</b> (sección 10): bases 2026 (PDF), modelo de declaración jurada, carta de aceptación, materiales de interés y el video &ldquo;cómo crear un agente&rdquo;. <span class='src'>Sección 10</span>"},
+   {k:["cronograma","pago","cobro","cuando cobro","partida","enero"],a:"El pago es en una <b>única partida</b>; el orden depende del cronograma (los de ejecución más próxima cobran primero). Los proyectos arrancan en enero de 2027. <span class='src'>Sección 08</span>"},
+   {k:["patrimonio","patrimonial","comision nacional","monumento"],a:"Si el espacio es patrimonio declarado por la Comisión Nacional, adjuntá el comprobante y tenelo en cuenta al pensar la obra. <span class='src'>Sección 04</span>"}
+  ];
+  var SUG=["¿Cuánto puedo pedir?","¿Quién puede postular?","¿Qué documentos necesito?","¿Cuándo cierra?","¿Cómo postulo?","¿A quién le consulto?"];
+  var btn=document.getElementById('askBtn'),panel=document.getElementById('askPanel'),closeb=document.getElementById('askClose'),
+      msgs=document.getElementById('askMsgs'),sug=document.getElementById('askSug'),form=document.getElementById('askForm'),input=document.getElementById('askInput');
+  if(!btn)return;
+  function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
+  function esc(s){return s.replace(/[<>&]/g,function(m){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[m];});}
+  function bubble(html,who){var d=document.createElement('div');d.className='ask-b '+who;d.innerHTML=html;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+  function answer(q){var t=norm(q),best=null,bs=0;KB.forEach(function(e){var s=0;e.k.forEach(function(kw){if(t.indexOf(norm(kw))>=0)s++;});if(s>bs){bs=s;best=e;}});return (best&&bs>0)?best.a:FB;}
+  function ask(q){bubble(esc(q),'me');setTimeout(function(){bubble(answer(q),'bot');},170);}
+  function openP(){panel.hidden=false;btn.style.display='none';setTimeout(function(){input.focus();},50);}
+  function closeP(){panel.hidden=true;btn.style.display='';}
+  btn.addEventListener('click',openP);closeb.addEventListener('click',closeP);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden)closeP();});
+  form.addEventListener('submit',function(e){e.preventDefault();var v=input.value.trim();if(!v)return;input.value='';ask(v);});
+  SUG.forEach(function(q){var b=document.createElement('button');b.type='button';b.textContent=q;b.addEventListener('click',function(){ask(q);});sug.appendChild(b);});
+  bubble("¡Hola! Te ayudo a entender esta guía del fondo. Elegí una pregunta o escribí la tuya.",'bot');
+})();
+</script>
+
+</body>
+</html>
